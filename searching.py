@@ -38,8 +38,13 @@ def pattern_search(sequence, pattern):
     pos = set()
     idx = 0
     while idx < len(sequence) - len(pattern):
-        substring = sequence[idx:idx + len(pattern)]
-        if substring == pattern:
+        index = 0   # substring = sequence[idx:idx + len(pattern)]
+        while index < len(pattern):
+            if sequence[idx + index] == pattern[index]:
+                index = index + 1   # if substring == pattern:
+            else:
+                break
+        else:
             pos.add(idx)
         idx = idx + 1
 
