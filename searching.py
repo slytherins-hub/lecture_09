@@ -45,6 +45,7 @@ def pattern_search(sequence, pattern):
 
     return pos
 
+
 def main():
     sequential_data = read_data("sequential.json", "unordered_numbers")
     my_number = 10
