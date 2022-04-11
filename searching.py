@@ -20,6 +20,7 @@ def read_data(file_name, field):
     print(data[field])
     return data[field]
 
+
 def linear_search(sequential_data, number):
     slovnik = {}
     a = []
