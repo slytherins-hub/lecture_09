@@ -24,9 +24,21 @@ def read_data(file_name, field):
     return seq[field]
 
 
+def linear_search(sequence, number):
+    indices = list()
+    count = 0
+    for index, num in enumerate(sequence):
+        if num == number:
+            indices.append(index)
+            count += 1
+    return {"position": indices, "count": count}
+
+
 def main():
-    seq = read_data("sequential.json", "dna_sequence")
-    print(seq)
+    sequential_data = read_data("sequential.json", "unordered_numbers")
+    print(sequential_data)
+    linear = linear_search(sequential_data, 0)
+    print(linear)
     pass
 
 
